@@ -1,40 +1,24 @@
 package com.codingtheory;
 
-import com.codingtheory.inheritance.CheckBox;
-import com.codingtheory.inheritance.TextBox;
-import com.codingtheory.inheritance.UIControl;
-import com.codingtheory.interfaces.TaxCalculator;
-import com.codingtheory.interfaces.TaxCalculator2019;
+import com.codingtheory.memento.Editor;
+import com.codingtheory.memento.History;
 
 public class Main {
 
     public static void main(String[] args) {
-        User user = new User("Mosh", 30);
-        user.sayHello();
 
-        var calculator = getCalculator();
-        System.out.println("Taxes: " + calculator.calculateTax());
+        var editor = new Editor();
+        var history = new History();
 
-        var account = new Account();
-        account.deposit(11);
-        account.withdraw(5);
-        System.out.println("Balance: " + account.getBalance());
+        editor.setContent("a");
+        history.push(editor.createState());
 
-        var mailService = new MailService();
-        mailService.sendEmail();
+        editor.setContent("b");
+        history.push(editor.createState());
 
-        var textBox = new TextBox();
-        textBox.enable();
+        editor.setContent("c");
+        editor.restoreState(history.pop());
 
-        drawUIControl(new TextBox());
-        drawUIControl(new CheckBox());
-    }
-
-    public static void drawUIControl(UIControl control) {
-        control.draw();
-    }
-
-    public static TaxCalculator getCalculator() {
-        return new TaxCalculator2019();
+        System.out.println(editor.getContent());
     }
 }
