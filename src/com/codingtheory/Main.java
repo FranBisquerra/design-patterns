@@ -11,6 +11,11 @@ public class Main {
 
         var calculator = getCalculator();
         System.out.println("Taxes: " + calculator.calculateTax());
+
+        var account = new Account();
+        account.deposit(11);
+        account.withdraw(5);
+        System.out.println("Balance: " + account.getBalance());
     }
 
     public static TaxCalculator getCalculator() {
