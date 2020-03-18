@@ -1,6 +1,8 @@
 package com.codingtheory;
 
+import com.codingtheory.inheritance.CheckBox;
 import com.codingtheory.inheritance.TextBox;
+import com.codingtheory.inheritance.UIControl;
 import com.codingtheory.interfaces.TaxCalculator;
 import com.codingtheory.interfaces.TaxCalculator2019;
 
@@ -23,6 +25,13 @@ public class Main {
 
         var textBox = new TextBox();
         textBox.enable();
+
+        drawUIControl(new TextBox());
+        drawUIControl(new CheckBox());
+    }
+
+    public static void drawUIControl(UIControl control) {
+        control.draw();
     }
 
     public static TaxCalculator getCalculator() {
