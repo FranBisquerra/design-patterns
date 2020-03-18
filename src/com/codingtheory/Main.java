@@ -1,5 +1,6 @@
 package com.codingtheory;
 
+import com.codingtheory.inheritance.TextBox;
 import com.codingtheory.interfaces.TaxCalculator;
 import com.codingtheory.interfaces.TaxCalculator2019;
 
@@ -19,6 +20,9 @@ public class Main {
 
         var mailService = new MailService();
         mailService.sendEmail();
+
+        var textBox = new TextBox();
+        textBox.enable();
     }
 
     public static TaxCalculator getCalculator() {
