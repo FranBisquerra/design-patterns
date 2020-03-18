@@ -16,6 +16,9 @@ public class Main {
         account.deposit(11);
         account.withdraw(5);
         System.out.println("Balance: " + account.getBalance());
+
+        var mailService = new MailService();
+        mailService.sendEmail();
     }
 
     public static TaxCalculator getCalculator() {
