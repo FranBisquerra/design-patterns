@@ -1,6 +1,6 @@
 # design-patterns
-Basic samples of useful design patterns, each branch contains an 
-implementation of a pattern.
+Basic samples of useful design patterns, on each repository tag the main program
+uses the implemented pattern.
 
 ## List of covered patterns
 
