@@ -1,18 +1,21 @@
 package com.codingtheory;
 
-import com.codingtheory.iterator.BrowserHistory;
+import com.codingtheory.iterator.BrowseHistory;
+import com.codingtheory.iterator.Iterator;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        var browseHistory = new BrowserHistory();
+        var browseHistory = new BrowseHistory();
         browseHistory.push("a");
         browseHistory.push("b");
         browseHistory.push("c");
 
-        for (var i = 0; i < browseHistory.getUrls().size(); i++) {
-            System.out.println(browseHistory.getUrls().get(i));
+        Iterator iterator = browseHistory.createIterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.current());
+            iterator.next();
         }
     }
 }
