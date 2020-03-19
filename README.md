@@ -15,3 +15,7 @@ uses the implemented pattern.
 ### Iterator pattern
     Behavioural pattern
     Allows the secuential iteration of an object collection attribute decoupled from its implementation.
+    
+### Strategy pattern
+    Behavioural pattern
+    Allows the selection of the algorithm to use at runtime, similar to the state pattern it is different to its counterpart in the fact that it does not modify the object state but only its behaviour.
