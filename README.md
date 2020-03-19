@@ -19,3 +19,7 @@ uses the implemented pattern.
 ### Strategy pattern
     Behavioural pattern
     Allows the selection of the algorithm to use at runtime, similar to the state pattern it is different to its counterpart in the fact that it does not modify the object state but only its behaviour.
+
+### Template pattern
+    Behavioural pattern
+    Uses a template method, usually in an abstract class, to define de skeleton of an operation in terms od a number a high-level steps.
