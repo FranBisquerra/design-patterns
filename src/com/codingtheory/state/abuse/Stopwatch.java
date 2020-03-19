@@ -2,15 +2,17 @@ package com.codingtheory.state.abuse;
 
 public class Stopwatch {
 
-    private boolean isRunning;
+    private State currentState = new StoppedState(this);
 
     public void click() {
-        if (isRunning) {
-            isRunning = false;
-            System.out.println("Stopped");
-        } else {
-            isRunning = true;
-            System.out.println("Running");
-        }
+        currentState.click();
+    }
+
+    public State getState() {
+        return currentState;
+    }
+
+    public void setState(State state) {
+        this.currentState = state;
     }
 }
