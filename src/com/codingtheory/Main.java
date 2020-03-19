@@ -1,24 +1,18 @@
 package com.codingtheory;
 
-import com.codingtheory.state.abuse.Stopwatch;
-import com.codingtheory.state.exercise.DirectionService;
-import com.codingtheory.state.exercise.Driving;
-import com.codingtheory.state.exercise.Walking;
+import com.codingtheory.iterator.BrowserHistory;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        var stopwatch = new Stopwatch();
-        stopwatch.click();
-        stopwatch.click();
+        var browseHistory = new BrowserHistory();
+        browseHistory.push("a");
+        browseHistory.push("b");
+        browseHistory.push("c");
 
-        var drivingService = new DirectionService(new Driving());
-        System.out.println(drivingService.getEta());
-        System.out.println(drivingService.getDirection());
-
-        var walkingService = new DirectionService(new Walking());
-        System.out.println(walkingService.getEta());
-        System.out.println(walkingService.getDirection());
+        for (var i = 0; i < browseHistory.getUrls().size(); i++) {
+            System.out.println(browseHistory.getUrls().get(i));
+        }
     }
 }
