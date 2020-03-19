@@ -1,15 +1,13 @@
 package com.codingtheory;
 
-import com.codingtheory.state.Canvas;
-import com.codingtheory.state.EraserTool;
+import com.codingtheory.state.abuse.Stopwatch;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        var canvas = new Canvas();
-        canvas.setCurrentTool(new EraserTool());
-        canvas.mouseDown();
-        canvas.mouseUp();
+        var stopwatch = new Stopwatch();
+        stopwatch.click();
+        stopwatch.click();
     }
 }
