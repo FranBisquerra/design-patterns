@@ -5,5 +5,13 @@ uses the implemented pattern.
 ## List of covered patterns
 
 ### Memento pattern
-    Useful to deal with problems such as the history of changes
-    in a text editor.
+    Behavioural pattern
+    Useful to deal with problems such as the history of changes in a text editor.
+    
+### State pattern
+    Behavioural pattern
+    Allows an object to alter its behaviour when its internal state changes
+
+### Iterator pattern
+    Behavioural pattern
+    Allows the secuential iteration of an object collection attribute decoupled from its implementation.
