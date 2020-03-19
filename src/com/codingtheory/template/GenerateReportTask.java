@@ -1,15 +1,9 @@
 package com.codingtheory.template;
 
-public class GenerateReportTask {
+public class GenerateReportTask extends Task {
 
-    private AuditTrail auditTrail;
-
-    public GenerateReportTask(AuditTrail auditTrail) {
-        this.auditTrail = auditTrail;
-    }
-
-    public void execute() {
-        auditTrail.record();
+    @Override
+    protected void doExecute() {
         System.out.println("Generate report");
     }
 }
