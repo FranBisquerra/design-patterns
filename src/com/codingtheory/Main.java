@@ -3,6 +3,8 @@ package com.codingtheory;
 import com.codingtheory.strategy.BlackAndWhiteFilter;
 import com.codingtheory.strategy.ImageStorage;
 import com.codingtheory.strategy.JpegCompressor;
+import com.codingtheory.strategy.exercice.ChatClient;
+import com.codingtheory.strategy.exercice.DESEncryptor;
 
 public class Main {
 
@@ -10,5 +12,8 @@ public class Main {
 
        var imageStorage = new ImageStorage(new JpegCompressor(), new BlackAndWhiteFilter());
        imageStorage.store("file name");
+
+       var chat = new ChatClient(new DESEncryptor());
+       chat.send("message");
     }
 }
