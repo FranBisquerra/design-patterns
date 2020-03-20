@@ -23,3 +23,9 @@ uses the implemented pattern.
 ### Template pattern
     Behavioural pattern
     Uses a template method, usually in an abstract class, to define de skeleton of an operation in terms od a number a high-level steps.
+    
+### Command pattern
+    Behavioural pattern
+    Used to encapsulate all information needed to perform an action or trigger an event at a later time. 
+    It can also be used to perform multiple actions creating a Composite command or to track the history of executed commands, Similar to the state pattern.
+    Unlike the state pattern it does not store full states, the implmented commands know how to execute and unexecute themselves.
