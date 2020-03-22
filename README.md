@@ -29,3 +29,6 @@ uses the implemented pattern.
     Used to encapsulate all information needed to perform an action or trigger an event at a later time. 
     It can also be used to perform multiple actions creating a Composite command or to track the history of executed commands, Similar to the memento pattern.
     Unlike the memento pattern it does not store full states, the implmented commands know how to execute and unexecute themselves.
+    
+### Observer pattern
+    Used to notify dependant object that a change in its dependency happened.
