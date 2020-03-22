@@ -28,3 +28,6 @@ uses the implemented pattern.
     
 #### Observer pattern
     Used to notify dependant object that a change in its dependency happened.
+
+#### Mediator pattern
+    Design to manage the interaction between different components in a centralized way having all the business logic in the mediator object.
