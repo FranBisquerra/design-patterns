@@ -1,10 +1,10 @@
 package com.codingtheory.mediator
 
-class ListBox(owner: DialogBox) : UiControl(owner) {
+class ListBox : UiControl() {
 
     var selection : String = ""
         set(value) {
             field = value
-            owner.changed(this)
+            notifyEventHandlers()
         }
 }

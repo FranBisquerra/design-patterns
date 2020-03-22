@@ -1,10 +1,10 @@
 package com.codingtheory.mediator
 
-class TextBox(owner: DialogBox) : UiControl(owner) {
+class TextBox : UiControl() {
 
     var content: String = ""
         set(value) {
             field = value
-            owner.changed(this)
+            notifyEventHandlers()
         }
 }

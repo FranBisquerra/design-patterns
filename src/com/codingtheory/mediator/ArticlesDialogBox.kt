@@ -1,22 +1,29 @@
 package com.codingtheory.mediator
 
-class ArticlesDialogBox : DialogBox() {
+class ArticlesDialogBox {
 
-    private val articleListBox = ListBox(this)
-    private val titleTextBox = TextBox(this)
-    private val saveButton = Button(this)
+    private val articleListBox = ListBox()
+    private val titleTextBox = TextBox()
+    private val saveButton = Button()
+
+    init {
+        articleListBox.addEventHandler(object : EventHandler {
+            override fun handle() {
+                articleSelected()
+            }
+        })
+        titleTextBox.addEventHandler(object : EventHandler {
+            override fun handle() {
+                titleChanged()
+            }
+
+        })
+    }
 
     fun simulateUserInteraction() {
         articleListBox.selection = "Article 1"
         println("TextBox: ${titleTextBox.content}")
         println("Button: ${saveButton.isEnabled}")
-    }
-
-    override fun changed(uiControl: UiControl) {
-        when (uiControl) {
-            articleListBox -> articleSelected()
-            titleTextBox -> titleChanged()
-        }
     }
 
     private fun titleChanged() {
