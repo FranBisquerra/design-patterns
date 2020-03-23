@@ -1,6 +1,7 @@
 package com.codingtheory;
 
 import com.codingtheory.mediator.ArticlesDialogBox;
+import com.codingtheory.mediator.exercise.SignUpDialogBox;
 
 public class Main {
 
@@ -8,5 +9,8 @@ public class Main {
 
         var dialog = new ArticlesDialogBox();
         dialog.simulateUserInteraction();
+
+        var signUp = new SignUpDialogBox();
+        signUp.simulateUser();
     }
 }
