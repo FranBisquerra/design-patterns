@@ -31,3 +31,6 @@ uses the implemented pattern.
 
 #### Mediator pattern
     Design to manage the interaction between different components in a centralized way having all the business logic in the mediator object.
+    In oder to prevent the mediator implementation to manage all the logic that might end up with a lot of conditions depending on the amount of components
+    as seen in tag *mediator-pattern*. It can be implemented using the observer pattern, this way an event handler is attached to each component 
+    implementation and this eventHandler contains the bussiness logic. 

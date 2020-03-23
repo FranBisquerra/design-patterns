@@ -21,7 +21,7 @@ class SignUpDialogBox {
                 toggleButton()
             }
         })
-        
+
         pwd.attachEventHandler(object : EventHandler {
             override fun handle() {
                 toggleButton()
