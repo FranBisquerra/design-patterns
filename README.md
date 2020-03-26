@@ -1,6 +1,5 @@
 # design-patterns
-Basic examples of useful design patterns, on each repository tag the main program
-uses the implemented pattern.
+Basic examples of useful design patterns.
 
 ## List of covered patterns
 
