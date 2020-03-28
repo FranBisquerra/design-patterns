@@ -1,8 +1,10 @@
 package com.codingtheory.chainOfResponsibility
 
-class WebServer {
+class WebServer(
+        private val handler: Handler?
+) {
+
     fun handle(httpRequest: HttpRequest) {
-        val authenticator = Authenticator()
-        authenticator.authenticate(httpRequest)
+        handler?.handle(httpRequest)
     }
 }
