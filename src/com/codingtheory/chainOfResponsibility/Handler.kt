@@ -1,6 +1,8 @@
 package com.codingtheory.chainOfResponsibility
 
-abstract class Handler(private val next: Handler?) {
+abstract class Handler(
+        private val next: Handler?
+) {
 
     abstract fun doHandle(request: HttpRequest): Boolean
 
